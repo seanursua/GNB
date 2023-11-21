@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: poppins;
+    user-select: none;
+    background: #fff;
+    overflow: auto;
+}
+nav img{
+    line-height: 70px;
+    max-height: 700px;
+    padding: 10px;
+    padding-left: 100px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    background: #000;
+    box-shadow: 0 3px 15px #000;
+}
+nav ul{
+    display: flex;
+    margin-right: 30px;
+}
+.transfer {
+    display: flex;
+    flex-direction: column;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    color: white;
+    display: block;
+    padding: 0 15px;
+    padding-right: 50px;
+    line-height: 90px;
+    font-size: 20px;
+    background: #000;
+    transition: .5s;
+}
+  nav ul li a:hover,
+  nav ul li a.active{
+    color: #F2AA4CFF;
+}
+nav ul ul{
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid #F2AA4CFF;
+    opacity: 0;
+    visibility: hidden;
+}
+nav ul li:hover > ul{
+    top: 90px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+}
+nav ul ul li{
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid #F2AA4CFF;
+    border-top: none;
+}
+nav ul ul li a{
+    line-height: 45px;
+}
+.wrapper {
+    display: block;
+    text-align: center;
+}
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    text-align: center;
+    width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #000;
+}
+h2 {
+    text-align: center;
+    font-size:30px;
+    margin-bottom: 40px;
+}
+h6 {
+    text-align: center;
+    font-size:15px;
+    margin-bottom: 20px;
+}
+button {
+    background: black;
+    font-family: poppins;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 15px;
+    border: none;
+}
+button:hover{
+    opacity: .7;
+}
+form a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+form a:hover {
+    background-color: #333;
+    cursor: pointer;
+}

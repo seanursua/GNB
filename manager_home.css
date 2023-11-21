@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: poppins;
+    overflow-y: auto;
+    user-select: none;
+    background: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: poppins;
+    overflow-y: auto;
+}
+nav {
+    display: flex;
+    height: 90px;
+    width: 100%;
+    justify-content: space-between;
+    background: #000;
+    box-shadow: 0 3px 15px #333;
+}
+.gnblogo {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    margin-left: 4rem;
+    border: none;
+    outline: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #F2AA4CFF;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.content .textbox h2 {
+    color: #333;
+    font-size: 4em;
+    line-height: 1.3em;
+    font-weight: 700;
+}
+.content .textbox span {
+    font-family: Fraunces;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 1000;
+}
+.content .textbox span:hover {
+    background: linear-gradient(to right, #333 25%, #333 50%, #000 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+    text-decoration: none;
+}
+.content .textbox p {
+    font-size: 30px;
+    font-family: poppins;
+    font-weight: 600;
+    color: #000;
+}
+.content .textbox a {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    padding: 8px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.content .textbox a:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+.content .gnb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 896px) {
+.line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+nav {
+      position: relative;
+}
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+}
+.nav-links {
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+.nav-links.open {
+    background: #000;
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+}
+.nav-links li {
+    opacity: 0;
+}
+.nav-links li a {
+    font-size: 20px;
+}
+nav ul ul li a{
+    line-height: 50px;
+}
+.nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.15s;
+}
+.nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.30s;
+}
+.nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.45s;
+}
+li.fade {
+    opacity: 1;
+}
+}
+@media screen and (max-width: 768px) {
+.nav-links {
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% 10%);
+    -webkit-clip-path: circle(100px at 90% 10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+.nav-links.open {
+    background: #000;
+    clip-path: circle(1200px at 90% 10%);
+    -webkit-clip-path: circle(1200px at 90% 10%);
+    pointer-events: all;
+}
+}
+@media screen and (max-width: 540px){
+    img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 200px) {
+    body {
+        visibility: hidden;
+}
+}

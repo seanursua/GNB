@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: poppins;
+    overflow: auto;
+    user-select: none;
+    background: #fff;
+}
+nav {
+    display: flex;
+    height: 90px;
+    width: 100%;
+    justify-content: space-between;
+    background: #000;
+    box-shadow: 0 3px 15px #333;
+}
+.gnblogo {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    margin-left: 4rem;
+    border: none;
+    outline: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    width: 200%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #F2AA4CFF;
+}
+#tbl_depositors {
+    font-family: poppins;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+}
+#tbl_depositors td, #tbl_depositors th {
+    text-align: center;
+    border: 2px solid #ddd;
+    padding: 5px;
+}
+
+td, th, tr {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#tbl_depositors tr {
+    background-color: #d6d3d3;
+}
+
+#tbl_depositors tr:hover {
+    background-color: #F2AA4CFF;
+}
+
+#tbl_depositors th {
+    background-color: #000;
+    color: white;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 896px) {
+.line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+nav {
+      position: relative;
+}
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+}
+.nav-links {
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+.nav-links.open {
+    background: #000;
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+}
+.nav-links li {
+    opacity: 0;
+}
+.nav-links li a {
+    font-size: 20px;
+}
+nav ul ul li a{
+    line-height: 50px;
+}
+.nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.12s;
+}
+.nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.24s;
+}
+.nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.36s;
+}
+.nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.48s;
+}
+.nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.60s;
+}
+.nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.72s;
+}
+.nav-links li:nth-child(7) {
+    transition: all 0.5s ease 0.81s;
+}
+li.fade {
+    opacity: 1;
+}
+}
+@media screen and (max-width: 768px) {
+.nav-links {
+    position: absolute;
+    height: 60vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% 10%);
+    -webkit-clip-path: circle(100px at 90% 10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+.nav-links.open {
+    background: #000;
+    clip-path: circle(1200px at 90% 10%);
+    -webkit-clip-path: circle(1200px at 90% 10%);
+    pointer-events: all;
+}
+}
+@media screen and (max-width: 200px) {
+    body {
+        visibility: hidden;
+}
+}
